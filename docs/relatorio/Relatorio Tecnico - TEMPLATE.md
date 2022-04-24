@@ -10,11 +10,11 @@ Engenharia de Software
 ## Participantes
 
 > Os membros do grupo são: 
-Yago Sander Vaz de Lima
-Giovanni Bogliolo Sirihal Duarte
-Pedro Ramos Vidigal
-Vitor Nunes Calhau
-Murilo Marques Silva
+>Yago Sander Vaz de Lima
+>Giovanni Bogliolo Sirihal Duarte
+>Pedro Ramos Vidigal
+>Vitor Nunes Calhau
+>Murilo Marques Silva
 
 # Estrutura do Documento
 
