@@ -1,15 +1,15 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Easy Search Comparador de preço online
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Engenharia de Software
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 >
