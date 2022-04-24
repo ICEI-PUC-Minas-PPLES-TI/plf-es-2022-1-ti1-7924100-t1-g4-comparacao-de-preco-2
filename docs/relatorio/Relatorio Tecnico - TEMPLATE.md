@@ -9,10 +9,6 @@ Engenharia de Software
 
 ## Participantes
 
-
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
 > Os membros do grupo são: 
 Yago Sander Vaz de Lima
 Giovanni Bogliolo Sirihal Duarte
