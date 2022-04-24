@@ -10,11 +10,11 @@ Engenharia de Software
 ## Participantes
 
 > Os membros do grupo são: 
->Yago Sander Vaz de Lima
->Giovanni Bogliolo Sirihal Duarte
->Pedro Ramos Vidigal
->Vitor Nunes Calhau
->Murilo Marques Silva
+Yago Sander Vaz de Lima,
+Giovanni Bogliolo Sirihal Duarte,
+Pedro Ramos Vidigal,
+Vitor Nunes Calhau,
+Murilo Marques Silva.
 
 # Estrutura do Documento
 
@@ -52,110 +52,20 @@ Engenharia de Software
 
 
 # Introdução
-
+Nosso grupo irá criar um site para comparar os preços de produtos tecnológicos online.
 ## Problema
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
+A falta de ferramentas dedicadas a comparação de preços e a alta demanda dessa funcionalidade. Com isso as pessoas encontram dores como comprar produtos mais caros sendo que em outros lugares o preço é mais acessível, sendo assim, o cliente possui problema com a economia que ele poderia estar fazendo. Ademais, outra dor que os clientes possuem, é a confiabilidade na hora de comprar online devido alguns sites não entregarem o produto ou entregarem com algum erro. Com isso, as pessoas buscam resolver essa dor para poder ter a segurança em comprar online.
 ## Objetivos
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
+Criar um site acessível para informar os usuários onde comprar o produto desejado com o menor preço possível. Sendo assim, temos como objetivo especificar os produtos, comparar os preços dos demais sites atualizando os preços de cada um, além de também proporcionar uma avaliação da entrega dos sites para que com isso o cliente fique seguro de poder comprar no site que ele desejar com melhor preço, visando a economia e a confiabilidade.
 ## Justificativa
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
-
+Percebemos que diversas pessoas procuravam uma boa ferramenta para comparar os preços e como conhecemos mais o mercado de produtos tecnológicos, decidimos focar nessa categoria. Por conseguinte, percebemos que uma das maiores dores que encontramos após as entrevistas, foi a falta de soluções para achar um mesmo produto com melhor preço nos sites online. Além de que, outra dor encontrada foi a insegurança de comprar online devido à ocorrências na entrega de produtos, como por exemplo um produto que não chegou, ou que veio errado.
 ## Público-Alvo
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
+Todas as pessoas que desejam comprar e comprarar produtos tecnológicos online.
+Um de nossos principais públicos-alvo são as pessoas que ja compram frequentemente online e visam pesquisar os produtos em vários sites antes de efetuar a compra, com isso eles buscam uma solução para esta dor, que seria o mais fácil acesso a estes sites para que ele consiga otimizar o tempo e comprarar os preços.
+Além deste público-alvo, também visamos os leigos no assunto que ainda possuém inseguranças com relação à compras online, como por exemplo falhas na entrega ou medo de efetuar um pagamento online.
+E por fim nossa solução pode ser utilizada para pessoas jurídicas que buscam comparar os preços do mercado para ter uma noção dos concorrentes e poder readequar seus preços.
 # Especificações do Projeto
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
-
 ## Personas e Mapas de Empatia
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
-
 
 ## Histórias de Usuários
 
