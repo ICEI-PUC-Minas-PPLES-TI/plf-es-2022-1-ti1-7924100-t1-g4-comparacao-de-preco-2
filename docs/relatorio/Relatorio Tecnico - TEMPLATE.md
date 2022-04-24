@@ -114,20 +114,16 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 # Metodologia
 Scrum
 ## Divisão de Papéis
-Yago: Developmente team (programador responsável pela parte de design do site)
-Giovanni: Developmente team (programador responsavel pela estrutura física do site)
-Vitor: Developmente team (Escolha de produtos por categoria e busca nos sites dos preços)
-Pedro: Developmente team (programador responsavel pela estrutura física do site)
-Murilo: Developmente team (Responsável pela parte do cliente, como login, usuário e suporte) 
+<br/>Yago: Developmente team (programador responsável pela parte de design do site)
+<br/>Giovanni: Developmente team (programador responsavel pela estrutura física do site)
+<br/>Vitor: Developmente team (Escolha de produtos por categoria e busca nos sites dos preços)
+<br/>Pedro: Developmente team (programador responsavel pela estrutura física do site)
+<br/>Murilo: Developmente team (Responsável pela parte do cliente, como login, usuário e suporte) 
 ## Ferramentas
-
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
-
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
+|Processo de Design Thinkgin  | Miro |  https://miro.com/app/board/uXjVOBTVFXQ=/ | 
+|Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7924100-t1-g4-comparacao-de-preco-2| 
 |Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
 
 >
