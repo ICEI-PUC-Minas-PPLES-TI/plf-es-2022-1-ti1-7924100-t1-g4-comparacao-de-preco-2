@@ -14,8 +14,11 @@ Engenharia de Software
 > Inclua a lista dos membros da equipe com seus nomes completos.
 >
 > Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+Yago Sander Vaz de Lima
+Giovanni Bogliolo Sirihal Duarte
+Pedro Ramos Vidigal
+Vitor Nunes Calhau
+Murilo Marques Silva
 
 # Estrutura do Documento
 
