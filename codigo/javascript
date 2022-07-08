@@ -1,0 +1,201 @@
+var maisBaratos = {
+    "data": [
+        {
+            "id": 1,
+            "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+            "loja": "Kabum",
+            "categoria": "Perifericos",
+            "marca": "Razer",
+            "preco": "259,90",
+            "imagem": "imagens/mouse.jpg",
+            "website": "https://www.kabum.com.br/produto/109815/mouse-gamer-razer-deathadder-v2-chroma-optical-switch-8-botoes-20000dpi-rz01-03210100-r3u1",
+            "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.", 
+        },
+        {
+            "id": 2,
+            "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+            "loja": "Magazine Luiza",
+            "categoria": "Perifericos",
+            "marca": "T-Dagger",
+            "preco": "248,23",
+            "imagem": "imagens/tecladofinal.jpg",
+            "website": "https://www.magazineluiza.com.br/teclado-mecanico-gamer-t-dagger-bora-rgb-switch-outemu-brown-pt-t-tgk315-brown/p/jk5e9461ef/in/tcdg/",
+            "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+        },
+        {
+            "id": 3,
+            "nome": "Headset gamer razer blackshark v2 x",
+            "loja": "Mercado livre",
+            "categoria": "Perifericos",
+            "marca": "Razer",
+            "preco": "329,00",
+            "imagem": "imagens/fone.png",
+            "website": "https://www.mercadolivre.com.br/fone-de-ouvido-over-ear-gamer-razer-blackshark-v2-x-classic-black/p/MLB16280514?pdp_filters=category:MLB1664#searchVariation=MLB16280514&position=1&search_layout=grid&type=product&tracking_id=7958a194-7321-48d4-b04e-78658a022fec",
+            "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+        },
+        {
+            "id": 4,
+            "nome": "iPhone 12 Apple",
+            "loja": "Kabum",
+            "categoria": "Mobile",
+            "marca": "Apple",
+            "preco": "4789,00",
+            "imagem": "imagens/Iphone.webp",
+            "website": "https://www.kabum.com.br/produto/346773/iphone-12-mini-apple-64gb-verde-5-4-cam-dupla-12mp-ios",
+            "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+        },
+        {
+            "id": 5,
+            "nome": " Samsung Galaxy S22 Ultra ",
+            "loja": "Amazon",
+            "categoria": " Mobile ",
+            "marca": " Samsung ",
+            "preco": "7.684",
+            "imagem": "imagens/s22ultra.jpg",
+            "website": " https://www.amazon.com.br/Smartphone-Samsung-Galaxy-Ultra-caneta/dp/B0B29FXT5H/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JKH8D83QNOWL&keywords=s22+ultra&qid=1656622993&sprefix=s2+ultra%2Caps%2C240&sr=8-5&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147%22%7D",
+            "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+        },
+        {
+            "id": 6,
+            "nome": "Gigabyte GeForce rtx 2060",
+            "loja": "Pichau",
+            "categoria": "Peças",
+            "marca": "Nvidia",
+            "preco": "2899,90",
+            "imagem": "imagens/Placa.webp",
+            "website": "https://www.pichau.com.br/placa-de-video-gigabyte-geforce-rtx-2060-d6-6gb-gddr6-192-bit-gv-n2060d6-6gd-rev-2-0",
+            "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+        },
+        {
+            "id": 7,
+            "nome": "Processador AMD Ryzen 5 3600",
+            "loja": "Mercado Livre",
+            "categoria": "Peças",
+            "marca": "AMD",
+            "preco": "1171,00",
+            "imagem": "imagens/processador.jpg",
+            "website": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-5-3600-100-100000031box-de-6-nucleos-e-42ghz-de-frequncia/p/MLB15143240?pdp_filters=category:MLB1712#searchVariation=MLB15143240&position=4&search_layout=grid&type=product&tracking_id=3b35fe36-7d9c-4b90-a3ef-01710c002a27",
+            "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado."
+        },
+        {
+            "id": 8,
+            "nome": "Notebook Gamer GIGABYTE G5",
+            "loja": "Kabum",
+            "categoria": "Computadores",
+            "marca": "GIGABYTE",
+            "preco": "8199,90",
+            "imagem": "imagens/Notebook.webp",
+            "website": "https://www.kabum.com.br/produto/269069/notebook-gamer-gigabyte-g5-geforce-rtx-3050-ti-intel-core-i5-11400h-16gb-ram-ssd-512gb-15-6-fhd-144hz-md-51br123sd",
+            "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra."
+        },
+        {
+            "id": 9,
+            "nome": "Notebook Gamer Legion 5i",
+            "loja": "Kabum",
+            "categoria": "Computadores",
+            "marca": "Lenovo",
+            "preco": "7,734",
+            "imagem": "imagens/Legion.jpg",
+            "website": "https://www.kabum.com.br/produto/245398/notebook-gamer-legion-5i-i7-10750h-16gb-512gb-ssd-rtx2060-6gb-w10-15-6-full-hd-wva-82cf0002br",
+            "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB."
+        },
+    ]
+}
+if (!localStorage.getItem("maisBaratos")) {
+    localStorage.setItem('maisBaratos',JSON.stringify(maisBaratos))
+}
+var db_contatos_inicial = JSON.parse(localStorage.getItem("maisBaratos"))
+
+
+function listar(categoria) {
+    let lista_produtos = '';
+    for (let index = 0; index < maisBaratos.data.length; index++) {
+        const produto = maisBaratos.data[index];
+        const elemento = `
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card" style="width: 18rem;">
+                <img src="${db_contatos_inicial.data[index].imagem}" class="card-img-top" alt="produto 1">
+                <div class="button">
+                    <h5 class="card-title"><b>${db_contatos_inicial.data[index].nome}</b></h5>
+                    <p class="card-text"></p>
+                    <p>Preço: ${db_contatos_inicial.data[index].preco}</p>
+                    <p>Marca: ${db_contatos_inicial.data[index].marca}</p>
+                    <p>Loja: ${db_contatos_inicial.data[index].loja}</p>
+                    <button id="link-produto-${produto.id}" href="#" type="button" class="btn btn-secondary" 
+                     data-bs-toggle="modal" data-bs-target="#staticBackdrop"   data-id="${produto.id}"> Detalhes </button>
+                    <a href="${db_contatos_inicial.data[index].website}" target="_blank" class="link-produto btn btn-danger">Comprar</a>
+                </div>
+            </div>
+        </div>
+        `
+        if (categoria === 'Todos') {
+
+            lista_produtos += elemento
+        } else
+            if (produto.categoria === categoria) {
+                lista_produtos += elemento
+            }
+
+    }
+    document.getElementById("cards_produtos").innerHTML = lista_produtos
+}
+function detalhes() {
+
+    let mais_detalhes = '';
+    for (let index = 0; index < db_contatos_inicial.data.length; index++) {
+        const produto = db_contatos_inicial.data[index];
+        mais_detalhes += `
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">${db_contatos_inicial.data[index].nome}</h5>
+                        </div>
+                        <div class="modal-body">
+                        <p>Preço: ${db_contatos_inicial.data[index].preco}</p>
+                        <p>Marca: ${db_contatos_inicial.data[index].marca}</p>
+                        <p>Loja: ${db_contatos_inicial.data[index].loja}</p>
+                        <p>Descrição: ${db_contatos_inicial.data[index].descricao}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                            <a href="${db_contatos_inicial.data[index].website}" class="link-produto btn btn-dark">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        `
+    }
+
+    document.getElementById("modal").innerHTML = mais_detalhes
+}
+
+function montamodal(event) {
+    let id = event.relatedTarget.getAttribute ('data-id')
+    const produto = db_contatos_inicial.data.find(elem => elem.id == id)
+
+    let mais_detalhes = `
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"><b>${produto.nome}</b></h5>
+            
+        </div>
+        <div class="modal-body">
+        <p>Preço: ${produto.preco}</p>
+        <p>Marca: ${produto.marca}</p>
+        <p>Loja: ${produto.loja}</p>
+        <p>Descrição: ${produto.descricao}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <a href="${produto.website}" class="link-produto btn btn-primary">Comprar</a>
+        </div>
+
+
+    `
+
+    document.getElementById("modal-content").innerHTML = mais_detalhes
+}
+document.getElementById ('modal').addEventListener ('shown.bs.modal', montamodal)
