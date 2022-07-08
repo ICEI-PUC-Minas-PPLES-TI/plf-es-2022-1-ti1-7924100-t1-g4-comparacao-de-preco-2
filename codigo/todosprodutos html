@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/99d0ecd39d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header style="background-color: rgb(6, 6, 6);" class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-2">
+                        <img class="logo" src="imagens/saco do gio 2.png" alt="logo">
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-8">
+                        <nav class="navbar navbar-expand-lg navbar-ligth">
+                            <div class="container-fluid">
+                                <div class="navbar" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="index.html">Página Inicial
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="todosProdutos.html">Produtos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Perfil</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main onload="detalhes()" class="container">
+        <div style="margin: 20px ;" class="row">
+            <div class="row">
+                <h2 class="Produtos" id="Produtos" style="font-family: Arial, Helvetica, sans-serif;"><b>Produtos</b></h2>
+            </div>
+            <div class="row">
+                <div id="botoes" class="col-sm-12 col-md-12 col-lg-12">
+                    <button onclick="listar('Todos')" type="button" class="btn btn-danger">Todos</button>
+                    <button onclick="listar('Perifericos')" type="button" class="btn btn-danger">Periféricos</button>
+                    <button onclick="listar('Computadores')" type="button" class="btn btn-danger">Computadores</button>
+                    <button onclick="listar('Mobile')" type="button" class="btn btn-danger">Mobile</button>
+                    <button onclick="listar('Peças')" type="button" class="btn btn-danger">Peças</button>
+                </div>
+            </div>
+
+            <body onload="listar('Todos')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="cards_produtos" class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div id="card" class="card" style="width: 18rem;">
+                                        <img id="img1" src="" class="card-img-top" alt="produto 1">
+                                        <div class="card-body">
+                                            <h5 id="titulo1" class="card-title"><b></b></h5>
+                                            <p id="text" class="card-text"></p>
+                                            <p id="preco"></p>
+                                            <p id="marca"></p>
+                                            <a id="link-produto" href="#"target="_blank" class="btn btn-primary"></a>
+                                                <button onClick="detalhes()" id="link_produto" href="#" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Detalhes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-12" id="modal">
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            
+                                    </div>
+                                    <div class="modal-body">
+                                        <pid="preco"></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+    </main>
+    <footer style="background-color: rgb(135, 17, 39);" class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <img class="logo2" src="imagens/saco do gio 2.png" alt="logo">
+            </div>
+            <div class="col-9">
+                <p style="padding-top: 37px; align-content: center; color: white;">Todos os direitos reservados - Easy Search - ©</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var todosProdutos = {
+            "data": [
+                {
+                    "id": 1,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Kabum",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "259,90",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.kabum.com.br/produto/109815/mouse-gamer-razer-deathadder-v2-chroma-optical-switch-8-botoes-20000dpi-rz01-03210100-r3u1"
+                },
+                {
+                    "id": 2,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Amazon",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "328,26",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.amazon.com.br/Mouse-Gaming-Razer-DeathAdder-Program%C3%A1veis/dp/B082G5SPR5/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14W29TMPJQI5&keywords=Deathadder+V2+Chroma&qid=1653153431&sprefix=deathadder+v2+chroma%2Caps%2C239&sr=8-1&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147"
+                },
+                {
+                    "id": 3,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Mercado Livre",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "303,00",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.mercadolivre.com.br/mouse-para-jogo-razer-deathadder-v2-preto/p/MLB15698869#searchVariation=MLB15698869&position=1&search_layout=stack&type=product&tracking_id=1841997d-f4fa-4349-baed-7a8037eae401"
+                },
+                {
+                    "id": 4,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Pichau",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "299,90",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.pichau.com.br/mouse-razer-deathadder-v2-chroma-20000-dpi-rz01-03210100-r3u1"
+                },
+                {
+                    "id": 5,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "359,90",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.magazineluiza.com.br/mouse-gamer-razer-deathadder-v2-chroma-8-botoes-20-000dpi-preto/p/bg28b3ck45/in/mger/"
+                },
+                {
+                    "id": 6,
+                    "nome": "Mouse Gamer Razer Deathadder V2 Chroma",
+                    "loja": "Americanas",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "388,90",
+                    "imagem": "imagens/mouse.jpg",
+                    "descricao": "Mouse razer deathadder tem sensor óptico, sensibilidade de 20.000 DPI, velocidade de rastreamento de 650 IPS, sincronização de movimento, monitoramento inteligente, 8 botões programáveis e cabo razer speedflex para maior mobilidade.",
+                    "website": "https://www.americanas.com.br/produto/4814471119?pfm_carac=mouse-razer-deathadder-v2-chroma&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=626aa0ed87c00289c24765ea&cor=Preto"
+                },
+                {
+                    "id": 7,
+                    "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+                    "loja": "Kabum",
+                    "categoria": "Perifericos",
+                    "marca": "T-Dagger",
+                    "preco": "299,90",
+                    "imagem": "imagens/tecladofinal.jpg",
+                    "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+                    "website": "https://www.kabum.com.br/produto/107964/teclado-mecanico-gamer-t-dagger-bora-rgb-switch-outemu-brown-pt-t-tgk315-brown"
+                },
+                {
+                    "id": 8,
+                    "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Perifericos",
+                    "marca": "T-Dagger",
+                    "preco": "248,23",
+                    "imagem": "imagens/tecladofinal.jpg",
+                    "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+                    "website": "https://www.magazineluiza.com.br/teclado-mecanico-gamer-t-dagger-bora-rgb-switch-outemu-brown-pt-t-tgk315-brown/p/jk5e9461ef/in/tcdg/"
+                },
+                {
+                    "id": 9,
+                    "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+                    "loja": "Pichau",
+                    "categoria": "Perifericos",
+                    "marca": "T-Dagger",
+                    "preco": "274,89",
+                    "imagem": "imagens/tecladofinal.jpg",
+                    "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+                    "website": "https://www.pichau.com.br/teclado-mecanico-t-dagger-bora-preto-switch-brown-t-tgk315-br"
+                },
+                {
+                    "id": 10,
+                    "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+                    "loja": "Americanas",
+                    "categoria": "Perifericos",
+                    "marca": "T-Dagger",
+                    "preco": "279,90",
+                    "imagem": "imagens/tecladofinal.jpg",
+                    "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+                    "website": "https://www.americanas.com.br/produto/4720381913?pfm_carac=teclado-mecanico-gamer-t-dagger-bora&pfm_index=2&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=62015565d9fd6edeec306a4e"
+                },
+                {
+                    "id": 11,
+                    "nome": "Teclado Mecânico Gamer T-Dagger Bora",
+                    "loja": "Amazon",
+                    "categoria": "Perifericos",
+                    "marca": "T-Dagger",
+                    "preco": "265,00",
+                    "imagem": "imagens/tecladofinal.jpg",
+                    "descricao": "Teclado Mecânico T dagger tem formato reduzido, sem teclado numérico, feito com plástico ABS, rgb, switch azul pesando 1.1 kg.",
+                    "website": "https://www.amazon.com.br/Teclado-Mec%C3%A2nico-T-Dagger-Switch-Outemu/dp/B08GQH1FD7/ref=sr_1_1?crid=9FMSFHJ9UJUQ&keywords=teclado+mec%C3%A2nico+gamer+t-dagger+bora&qid=1656262006&sprefix=Teclado+Mec%C3%A2nico+Gamer+T-Dagger%2Caps%2C185&sr=8-1&ufe=app_do%3Aamzn1.fos.e05b01e0-91a7-477e-a514-15a32325a6d6"
+                },
+                {
+                    "id": 12,
+                    "nome": "headset gamer razer blackshark v2 x",
+                    "loja": "Kabum",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "458,71",
+                    "imagem": "imagens/fone.png",
+                    "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+                    "website": "https://www.kabum.com.br/produto/128544/headset-gamer-razer-blackshark-v2-x-som-surround-7-1-p2-drivers-50mm-rz04-03240100-r3u1",
+                },
+                {
+                    "id": 13,
+                    "nome": "headset gamer razer blackshark v2 x",
+                    "loja": "Americanas",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "694,90",
+                    "imagem": "imagens/fone.png",
+                    "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+                    "website": "https://www.americanas.com.br/produto/3930099537?pfm_carac=headset-gamer-razer-blackshark-v2-x&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=615631bc09c351890d5a2b40",
+                },
+                {
+                    "id": 14,
+                    "nome": "headset gamer razer blackshark v2 x",
+                    "loja": "Amazon",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "419,07",
+                    "imagem": "imagens/fone.png",
+                    "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+                    "website": "https://www.amazon.com.br/s?k=Headset+Gamer+Razer+BlackShark+V2+X&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=YWBIQ5L4AKWH&sprefix=headset+gamer+razer+blackshark+v2+x%2Caps%2C326&ref=nb_sb_noss_1",
+                },
+                {
+                    "id": 15,
+                    "nome": "headset gamer razer blackshark v2 x",
+                    "loja": "Mercado livre",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "329,00",
+                    "imagem": "imagens/fone.png",
+                    "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+                    "website": "https://www.mercadolivre.com.br/fone-de-ouvido-over-ear-gamer-razer-blackshark-v2-x-classic-black/p/MLB16280514?pdp_filters=category:MLB1664#searchVariation=MLB16280514&position=1&search_layout=grid&type=product&tracking_id=7958a194-7321-48d4-b04e-78658a022fec",
+                },
+                {
+                    "id": 16,
+                    "nome": "headset gamer razer blackshark v2 x",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Perifericos",
+                    "marca": "Razer",
+                    "preco": "899,90",
+                    "imagem": "imagens/fone.png",
+                    "descricao": "O fone BlackShark V2 X da razer tem som surround 7.1, com almofadas de gel e microfone com isolamento de ruído.",
+                    "website": "https://www.magazineluiza.com.br/headset-gamer-razer-blackshark-v2-x/p/cff654b8eh/ea/hdga/",
+                },
+                {
+
+                    "id": 17,
+                    "nome": "iPhone 12 Apple",
+                    "loja": "Americanas",
+                    "categoria": "Mobile",
+                    "marca": "Apple",
+                    "preco": "5017,57",
+                    "imagem": "imagens/Iphone.webp",
+                    "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+                    "website": "https://www.americanas.com.br/produto/3591024100?pfm_carac=iphone-12-apple-64gb-branco-tela-6-1-12mp-ios&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6139379009c351890d7a3df1&cor=BRANCO"
+                },
+                {
+                    "id": 18,
+                    "nome": "iPhone 12 Apple",
+                    "loja": "Mercado Livre",
+                    "categoria": "Mobile",
+                    "marca": "Apple",
+                    "preco": "5999,90",
+                    "imagem": "imagens/Iphone.webp",
+                    "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+                    "website": "https://produto.mercadolivre.com.br/MLB-2071914014-iphone-12-mini-apple-64gb-branco-tela-54-cm-dupla-12mp-_JM#position=3&search_layout=stack&type=item&tracking_id=d509c9bd-95ec-4c5d-bdb4-19d19292596c"
+                },
+                {
+                    "id": 19,
+                    "nome": "iPhone 12 Apple",
+                    "loja": "Kabum",
+                    "categoria": "Mobile",
+                    "marca": "Apple",
+                    "preco": "4789,00",
+                    "imagem": "imagens/Iphone.webp",
+                    "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+                    "website": "https://www.kabum.com.br/produto/346773/iphone-12-mini-apple-64gb-verde-5-4-cam-dupla-12mp-ios"
+                },
+                {
+                    "id": 20,
+                    "nome": "iPhone 12 Apple",
+                    "loja": "Amazon",
+                    "categoria": "Mobile",
+                    "marca": "Apple",
+                    "preco": "5049,99",
+                    "imagem": "imagens/Iphone.webp",
+                    "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+                    "website": "https://www.amazon.com.br/Apple-iPhone-12-64-GB-Branco/dp/B09B7X1814/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WQBFQ53YF02N&keywords=iPhone%2B12%2BApple%2B128GB%2B-%2BBranco%2BTela%2B6%2C1%E2%80%9D%2B12MP%2BiOS&qid=1653160398&sprefix=iphone%2B12%2Bapple%2B64gb%2B-%2Bpreto%2Btela%2B6%2B1%2B12mp%2Bios%2Caps%2C206&sr=8-1&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1"
+                },
+                {
+                    "id": 21,
+                    "nome": "iPhone 12 Apple",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Mobile",
+                    "marca": "Apple",
+                    "preco": "5207,07",
+                    "imagem": "imagens/Iphone.webp",
+                    "descricao": "O iPhone 12 da Apple tem a tela de 6,1 polegadas, com ceramic shield, sistema de camera dupla avançado de 12 MP e camera frontal TrueDepth.",
+                    "website": "https://www.magazineluiza.com.br/iphone-12-apple-64gb-branco-tela-61-12mp-ios/p/231147400/te/teip/"
+                },
+                {
+                    "id": 22,
+                    "nome": "Samsung Galaxy S22 Ultra ",
+                    "loja": "Kabum",
+                    "categoria": "Mobile",
+                    "marca": "Samsung",
+                    "preco": " 10.499",
+                    "imagem": "imagens/s22ultra.jpg",
+                    "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+                    "website": " https://www.kabum.com.br/produto/312961/smartphone-samsung-galaxy-s22-ultra-5g-512gb-12gb-ram-tela-infinita-de-6-8-%22%7D"
+                },
+                {
+                    "id": 23,
+                    "nome": " Samsung Galaxy S22 Ultra ",
+                    "loja": "Magazine Luiza",
+                    "categoria": " Mobile ",
+                    "marca": "Samsung",
+                    "preco": "8.549",
+                    "imagem": "imagens/s22ultra.jpg",
+                    "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+                    "website": "https://www.magazineluiza.com.br/smartphone-samsung-galaxy-s22-ultra-256gb-vinho-5g-12gb-ram-68-cam-quadrupla-selfie-40mp/p/234440800/te/s21u/%22%7D"
+                },
+                {
+                    "id": 24,
+                    "nome": " Samsung Galaxy S22 Ultra ",
+                    "loja": "Americanas",
+                    "categoria": " Mobile ",
+                    "marca": " Samsung",
+                    "preco": "8.549",
+                    "imagem": "imagens/s22ultra.jpg",
+                    "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+                    "website": "https://www.americanas.com.br/produto/4646792570?pfm_carac=s22-ultra&pfm_index=1&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=620bb710d9fd6edeecc0f5a9&cor=VINHO%22%7D"
+                },
+                {
+                    "id": 25,
+                    "nome": " Samsung Galaxy S22 Ultra ",
+                    "loja": "Amazon",
+                    "categoria": " Mobile ",
+                    "marca": " Samsung ",
+                    "preco": "7.684",
+                    "imagem": "imagens/s22ultra.jpg",
+                    "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+                    "website": " https://www.amazon.com.br/Smartphone-Samsung-Galaxy-Ultra-caneta/dp/B0B29FXT5H/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JKH8D83QNOWL&keywords=s22+ultra&qid=1656622993&sprefix=s2+ultra%2Caps%2C240&sr=8-5&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147%22%7D"
+                },
+                {
+                    "id": 26,
+                    "nome": " Samsung Galaxy S22 Ultra ",
+                    "loja": "Mercado Livre",
+                    "categoria": "Mobile",
+                    "marca": "Samsung",
+                    "preco": "9.498 ",
+                    "imagem": "imagens/s22ultra.jpg",
+                    "descricao": "Samsung Galaxy S22 tem 256 GB De capacidade de armazenamento de memória, tem tecnologia 5G e tela de 6.8 polegadas.",
+                    "website": " https://produto.mercadolivre.com.br/MLB-2146305141-smartphone-samsung-galaxy-s22-ultra-5g-256gb-12gb-ram-branco-_JM#position=5&search_layout=stack&type=item&tracking_id=a75dc9be-b6e7-4899-8038-b4b99c022172%7D"
+                },
+                {
+                    "id": 27,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Americanas",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "3085,90",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.americanas.com.br/produto/4069197260?pfm_carac=placa-de-video-gigabyte-geforce-rtx-2060-d6-6gb-gddr6&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6271726487c00289c2db903a"
+                },
+                {
+                    "id": 28,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "3190,90",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.magazineluiza.com.br/placa-de-video-gigabyte-geforce-rtx-2060-d6-6gb-gddr6-192-bit-gv-n2060d6-6gd-rev-2-0/p/hcfek08e48/in/pcvd/"
+                },
+                {
+                    "id": 29,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Pichau",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "2899,90",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.pichau.com.br/placa-de-video-gigabyte-geforce-rtx-2060-d6-6gb-gddr6-192-bit-gv-n2060d6-6gd-rev-2-0"
+                },
+                {
+                    "id": 30,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Amazon",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "2931,60",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.amazon.com.br/Placa-V%C3%ADdeo-Gigabyte-GeForce-GDDR6/dp/B095SWPGVR/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2LSQJYLITNNZH&keywords=PLACA+DE+VIDEO+GIGABYTE+GEFORCE+RTX+2060+D6%2C+6GB%2C+GDDR6&qid=1653159744&sprefix=placa+de+video+gigabyte+geforce+rtx+2060+d6+6gb+gddr6%2Caps%2C380&sr=8-1&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147"
+                },
+                {
+                    "id": 31,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Kabum",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "3399,00",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.kabum.com.br/produto/302344/placa-de-video-gigabyte-geforce-rtx-2060-d6-6gb-gddr6-192bit"
+                },
+                {
+                    "id": 32,
+                    "nome": "Gigabyte GeForce rtx 2060",
+                    "loja": "Mercado Livre",
+                    "categoria": "Peças",
+                    "marca": "Nvidia",
+                    "preco": "3299,00",
+                    "imagem": "imagens/Placa.webp",
+                    "descricao": "A GeForce rtx 2060 tem interface de memória de 6 GB GDDR6, 192 bits, relógio núcleo 1680 MHz, PCI Express x16 3.0, 1920 CUDA Cores e resolução máxima digital 7680x4320.",
+                    "website": "https://www.mercadolivre.com.br/placa-de-video-nvidia-gigabyte-geforce-rtx-20-series-rtx-2060-gv-n2060d6-6gd-rev-20-6gb/p/MLB18617723?pdp_filters=category:MLB1712#searchVariation=MLB18617723&position=2&search_layout=grid&type=product&tracking_id=697bcc12-f54b-4335-b81e-877e75374ad5"
+                },
+                {
+                    "id": 33,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Kabum",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1199,00",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.kabum.com.br/produto/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-sem-video-100-100000031box"
+                },
+                {
+                    "id": 34,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Mercado Livre",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1171,00",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-5-3600-100-100000031box-de-6-nucleos-e-42ghz-de-frequncia/p/MLB15143240?pdp_filters=category:MLB1712#searchVariation=MLB15143240&position=4&search_layout=grid&type=product&tracking_id=3b35fe36-7d9c-4b90-a3ef-01710c002a27"
+                },
+                {
+                    "id": 35,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Amazon",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1303,40",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.amazon.com.br/Processador-AMD-Ryzen-3600-100-100000031BOX/dp/B07STGGQ18/ref=sr_1_2?crid=28VX76D0WBAW7&keywords=processador+amd+ryzen+5+3600&qid=1656262279&sprefix=Processador+AMD+Ryzen+5+3600%2Caps%2C170&sr=8-2&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147"
+                },
+                {
+                    "id": 36,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Pichau",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1704,43",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.pichau.com.br/processador-amd-ryzen-5-3600-6-core-12-threads-3-6ghz-4-2ghz-turbo-cache-35mb-am4-100-100000031sbx"
+                },
+                {
+                    "id": 37,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1689,35",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.magazineluiza.com.br/processador-amd-ryzen-5-3600-3-6-ghz-4-2ghz-max-boost-32mb-cache-ddr4-am4-100-100000031box/p/egc4h4072e/in/prsd/"
+                },
+                {
+                    "id": 38,
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "loja": "Americanas",
+                    "categoria": "Peças",
+                    "marca": "AMD",
+                    "preco": "1999,99",
+                    "imagem": "imagens/processador.jpg",
+                    "descricao": "O processador AMD Ryzen 5 3600 tem frequencia de 3.6ghz (4.2ghz max turbo), cache de 32mb, socket am4 e sem vídeo integrado.",
+                    "website": "https://www.americanas.com.br/produto/4987830600?pfm_carac=processador-amd-ryzen-5-3600&pfm_index=2&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6269c14587c00289c215ca5a"
+                },
+                {
+                    "id": 39,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Kabum",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "8199,90",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://www.kabum.com.br/produto/269069/notebook-gamer-gigabyte-g5-geforce-rtx-3050-ti-intel-core-i5-11400h-16gb-ram-ssd-512gb-15-6-fhd-144hz-md-51br123sd"
+                },
+                {
+                    "id": 40,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Pichau",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "8499,90",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://www.pichau.com.br/notebook-gamer-gigabyte-g5-kd-intel-i5-11400h-15-6-fhd-144hz-16gb-ddr4-ssd-512gb-m-2-rtx-3060-6gb-kd-52br123sd"
+                },
+                {
+                    "id": 41,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Americanas",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "9499,90",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://www.americanas.com.br/produto/4822007885?pfm_carac=notebook-gamer-gigabyte-g5&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=6234dc2187c00289c2c46dd5&cor=Preto"
+                },
+                {
+                    "id": 42,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "8631,47",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://www.magazineluiza.com.br/notebook-gamer-gigabyte-g5-geforce-rtx-3050-ti-intel-core-i5-11400h-16gb-ram-ssd-512gb-15-6-fhd-144hz-md-51br123sd/p/gckj1kgckg/in/note/"
+                },
+                {
+                    "id": 43,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Mercado Livre",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "11359,89",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://produto.mercadolivre.com.br/MLB-1942012485-notebook-gamer-gigabyte-g5-intei-i5-rtx3060-16g-ssd512-w10-_JM?searchVariation=90379793279#searchVariation=90379793279&position=3&search_layout=grid&type=item&tracking_id=0ea4255e-008a-45c8-8ba0-803276015483"
+                },
+                {
+                    "id": 44,
+                    "nome": "Notebook Gamer GIGABYTE G5",
+                    "loja": "Amazon",
+                    "categoria": "Computadores",
+                    "marca": "GIGABYTE",
+                    "preco": "9658,90",
+                    "imagem": "imagens/Notebook.webp",
+                    "descricao": "O notebook gamer GIGABYTE G5 	Intel Core i5-11400H de 11ª geração (2,7 GHz ~ 4,5 GHz), tela LCD antirreflexo, 2 x slots DDR4 de memória e com áudio DTS:X Ultra.",
+                    "website": "https://www.amazon.com.br/Notebook-Gamer-Gigabyte-I5-11400h-Kd-52br123sd/dp/B09W41TSBK/ref=sr_1_fkmr0_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2Z1CBEYF8VI6Y&keywords=Notebook+Gamer+GIGABYTE+G5+-+GeForce+RTX+3050+Ti%2C+Intel+Core+i5-11400H%2C+16GB+RAM%2C+SSD+512GB%2C+15.6+FHD+144Hz+-+MD-51BR123SD&qid=1653159971&sprefix=notebook+gamer+gigabyte+g5+-+geforce+rtx+3050+ti+intel+core+i5-11400h+16gb+ram+ssd+512gb+15.6+fhd+144hz+-+md-51br123sd%2Caps%2C169&sr=8-1-fkmr0&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147"
+                },
+                {
+                    "id": 45,
+                    "nome": "Notebook Gamer Legion 5i",
+                    "loja": "Kabum",
+                    "categoria": "Computadores",
+                    "marca": "Lenovo",
+                    "preco": "7,734",
+                    "imagem": "imagens/Legion.jpg",
+                    "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB.",
+                    "website": "https://www.kabum.com.br/produto/245398/notebook-gamer-legion-5i-i7-10750h-16gb-512gb-ssd-rtx2060-6gb-w10-15-6-full-hd-wva-82cf0002br"
+                },
+                {
+                    "id": 46,
+                    "nome": "Notebook Gamer Legion 5i",
+                    "loja": "Magazine Luiza",
+                    "categoria": "Computadores",
+                    "marca": "Lenovo",
+                    "preco": "7,734",
+                    "imagem": "imagens/Legion.jpg",
+                    "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB.",
+                    "website": "https://www.magazineluiza.com.br/notebook-gamer-legion-5i-i7-10750h-16gb-512gb-ssd-rtx2060-6gb-w10-15-6-full-hd-wva-82cf0002br-lenovo/p/egjj87b2dc/in/note/"
+                },
+                {
+                    "id": 47,
+                    "nome": "Notebook Gamer Legion 5i",
+                    "loja": "Mercado Livre",
+                    "categoria": "Computadores",
+                    "marca": "Lenovo",
+                    "preco": "8,189",
+                    "imagem": "imagens/Legion.jpg",
+                    "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB.",
+                    "website": "https://www.mercadolivre.com.br/notebook-gamer-lenovo-legion-5i-preta-156-intel-core-i7-10750h-16gb-de-ram-512gb-ssd-nvidia-geforce-rtx-2060-120-hz-1920x1080px-windows-10-home/p/MLB16233802?product_trigger_id=MLB17935723&pdp_filters=category%3AMLB1652&applied_product_filters=MLB16233802&quantity=1"
+                },
+                {
+                    "id": 48,
+                    "nome": "Notebook Gamer Legion 5i",
+                    "loja": "Americanas",
+                    "categoria": "Computadores",
+                    "marca": "Lenovo",
+                    "preco": "8,189",
+                    "imagem": "imagens/Legion.jpg",
+                    "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB.",
+                    "website": "https://www.americanas.com.br/produto/3628121650?pfm_carac=legion-5i&pfm_index=2&pfm_page=search&pfm_pos=grid&pfm_type=search_page&offerId=620b925bd9fd6edeec7173ad&cor=Phantom%20Black"
+                },
+                {
+                    "id": 49,
+                    "nome": "Notebook Gamer Legion 5i",
+                    "loja": "Amazon",
+                    "categoria": "Computadores",
+                    "marca": "Lenovo",
+                    "preco": "8,644",
+                    "imagem": "imagens/Legion.jpg",
+                    "descricao": "O notebook gamer Legion 5i tem processador Intel Core i7, tela antirreflexo, memória ram de 16 GB, 512 GB SSD e placa de vídeo NVIDEA GForce RTX 2060 6GB.",
+                    "website": "https://www.amazon.com.br/Notebook-Legion-i7-10750H-RTX2060-82CF0002BR/dp/B08GL1W94V/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=1FKZW7K9J0IF5&keywords=legion+5i&qid=1656611006&sprefix=legion+5i%2Caps%2C195&sr=8-1&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147"
+                },
+            ]
+        }
+        if (!localStorage.getItem("db_contatos_inicial")) {
+    localStorage.setItem('db_contatos_inicial',JSON.stringify(todosProdutos))
+}
+var db_contatos_inicial = JSON.parse(localStorage.getItem("db_contatos_inicial"))
+        function listar(categoria) {
+            let lista_produtos = '';
+            for (let index = 0; index < db_contatos_inicial.data.length; index++) {
+                const produto = db_contatos_inicial.data[index];
+                const elemento = `
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="${db_contatos_inicial.data[index].imagem}" class="card-img-top" alt="produto 1">
+                                        <div class="button">
+                                            <h5 class="card-title"><b>${db_contatos_inicial.data[index].nome}</b></h5>
+                                            <p class="card-text"></p>
+                                            <p>Preço: ${db_contatos_inicial.data[index].preco}</p>
+                                            <p>Marca: ${db_contatos_inicial.data[index].marca}</p>
+                                            <p>Loja: ${db_contatos_inicial.data[index].loja}</p>
+                                            <button id="link-produto-${produto.id}" href="#" type="button" class="btn btn-secondary" 
+                                             data-bs-toggle="modal" data-bs-target="#staticBackdrop"   data-id="${produto.id}"> Detalhes </button>
+                                            <a href="${db_contatos_inicial.data[index].website}" target="_blank" class="link-produto btn btn-danger">Comprar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                `
+                if (categoria === 'Todos') {
+
+                    lista_produtos += elemento
+                } else
+                    if (produto.categoria === categoria) {
+                        lista_produtos += elemento
+                    }
+            }
+            document.getElementById("cards_produtos").innerHTML = lista_produtos
+        }
+
+        function detalhes() {
+
+            let mais_detalhes = '';
+            for (let index = 0; index < db_contatos_inicial.data.length; index++) {
+                const produto = db_contatos_inicial.data[index];
+                mais_detalhes += `
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">${db_contatos_inicial.data[index].nome}</h5>
+                    </div>
+                    <div class="modal-body">
+                    <p>Preço: ${db_contatos_inicial.data[index].preco}</p>
+                    <p>Marca: ${db_contatos_inicial.data[index].marca}</p>
+                    <p>Loja: ${db_contatos_inicial.data[index].loja}</p>
+                    <p>Descrição: ${db_contatos_inicial.data[index].descricao}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        <a href="${db_contatos_inicial.data[index].website}" class="link-produto btn btn-dark">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    `
+            }
+
+            document.getElementById("modal").innerHTML = mais_detalhes
+        }
+
+        function montamodal(event) {
+            let id = event.relatedTarget.getAttribute('data-id')
+            const produto = db_contatos_inicial.data.find(elem => elem.id == id)
+
+            let mais_detalhes = `
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel"><b>${produto.nome}</b></h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                    <p>Preço: ${produto.preco}</p>
+                    <p>Marca: ${produto.marca}</p>
+                    <p>Loja: ${produto.loja}</p>
+                    <p>Descrição: ${produto.descricao}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a href="${produto.website}" class="link-produto btn btn-primary">Comprar</a>
+                    </div>
+
+
+                `
+
+            document.getElementById("modal-content").innerHTML = mais_detalhes
+        }
+        document.getElementById('modal').addEventListener('shown.bs.modal', montamodal)
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
