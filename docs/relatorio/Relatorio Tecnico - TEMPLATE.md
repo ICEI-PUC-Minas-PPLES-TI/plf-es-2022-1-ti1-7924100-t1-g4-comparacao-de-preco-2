@@ -138,15 +138,7 @@ Scrum
 </br>Site dos produtos
 </br>Bootstrap
 ## Arquitetura da solução
-
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
-
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+O processo consiste em passar pelo nosso código , Traduzir e executar nosso código em alguma plataforma ( Live server), além de ser possível acessar nosso site de comparador de preços pela sua hospedagem no replit.
 
 
 # Avaliação da Aplicação
@@ -166,7 +158,6 @@ Algo que os testes nos mostrou, foram os resultados do nosso banco de dados, que
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
 > - noticia usada na aprsentação: https://www.bbc.com/portuguese/media-59546902
 > **Links Úteis**:
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
