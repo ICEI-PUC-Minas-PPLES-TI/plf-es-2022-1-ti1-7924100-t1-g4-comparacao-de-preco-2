@@ -132,11 +132,11 @@ Scrum
 
 ## Tecnologias Utilizadas
 >As tecnologias utilizadas foram:
->Html
->css
->Javascript
->Site dos produtos
->Bootstrap
+</br>Html
+</br>css
+</br>Javascript
+</br>Site dos produtos
+</br>Bootstrap
 ## Arquitetura da solução
 
 ......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
